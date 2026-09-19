@@ -105,7 +105,7 @@
     letter-spacing:-0.02em;
   }
   .logo em{ font-style:normal; color:var(--teal-600); }
-  .logo-img{ height:30px; width:auto; display:block; }
+  .logo-img{   display: block; width: auto; height: 30px; max-width: none; flex-shrink: 0; object-fit: contain; }
   footer .logo-img{ height:34px; }
   .navlinks{ display:flex; gap:34px; list-style:none; margin:0; padding:0; }
   .navlinks a{
@@ -126,9 +126,20 @@
   .lang-toggle button.active{ background:var(--ink); color:var(--paper); }
   .menu-btn{ display:none; background:none; border:none; cursor:pointer; padding:8px; }
   .menu-btn span{ display:block; width:22px; height:2px; background:var(--ink); margin:5px 0; }
-  @media(max-width:900px){
-    .navlinks{ display:none; }
-    .menu-btn{ display:block; }
+@media(max-width:900px){
+  .navlinks{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+}
+
+@media(max-width:600px){
+  .logo-img{
+    height:24px;
+  }
   }
 
   /* ---------- HERO ---------- */
@@ -861,20 +872,20 @@
         links:[]
       },
       {
-        id:"muzo", tag:"Dirección de arte, diseño editorial, infografía", title:"Fundación Muzo",
-        desc:"Diseño editorial de los informes de sostenibilidad 2020 y el plan de gestión social 2021 - 2025 de la fundación.",
-        longDesc:"Diseñamos los informes de sostenibilidad, estándar GRI de Fundación Muzo. El encargo fue darle una segunda lectura a ese mismo contenido: que el rigor del reporte conviviera con el retrato de las familias detrás de cada cifra. Trabajamos la portada, la retícula editorial, el sistema de iconografía y la forma en que se presentan los datos de cada programa, manteniendo intacta la información que exige el estándar. Dos piezas editoriales que documentan y hacen públicos los avances de su trabajo, en un formato pensado para llegar tanto a aliados técnicos como a las comunidades de su territorio.",
-        result:{label:"2 informes", value:"2020 · 2021"},
-        media:{type:"image", src:"img/Caso-Muzo.jpg", bg:"dark"},
-        links:[]
-      },
-      {
         id:"Sitt", tag:"Campaña de Responsabilidad Social", title:"Sitt — Discapacidad de Origen Vial",
         desc:"Estrategia de investigación y comunicación para visibilizar la discapacidad derivada de los incidentes viales en Colombia.",
         longDesc:"Desde el área de Mercadeo y Comunicaciones de Sitt y Cía acompañamos una iniciativa de responsabilidad social empresarial enfocada en visibilizar una problemática poco reconocida: las personas que sobreviven a un incidente vial y quedan con una discapacidad. Desde 2016, Sitt apoyó investigaciones desarrolladas junto con la Universidad de Antioquia, investigadores y actores institucionales en distintos territorios del país. Nuestro trabajo articuló la comunicación de las investigaciones, la producción de contenidos y la socialización de sus resultados para convertir información especializada en conocimiento accesible para distintos grupos de interés. La estrategia incluyó publicaciones, contenidos digitales y espacios de divulgación, entre ellos el webinar “La cara oculta de la discapacidad por origen vial”, que alcanzó 272 registros y 99 asistentes nacionales e internacionales. El proyecto contribuyó a posicionar la DOV como un tema de conversación dentro de los ámbitos de seguridad vial, salud pública y responsabilidad social.",	
         result:{label:"8 territorios", value:'"2016 · 2023"'},
         media:{type:"video", videoId:"haroBBqaxTc"},
         links:[{label:"Ver video ↗", url:"https://www.youtube.com/watch?v=haroBBqaxTc&t=3s"}]
+      },
+      {
+        id:"muzo", tag:"Dirección de arte, diseño editorial, infografía", title:"Fundación Muzo",
+        desc:"Diseño editorial de los informes de sostenibilidad 2020 y el plan de gestión social 2021 - 2025 de la fundación.",
+        longDesc:"Diseñamos los informes de sostenibilidad, estándar GRI de Fundación Muzo. El encargo fue darle una segunda lectura a ese mismo contenido: que el rigor del reporte conviviera con el retrato de las familias detrás de cada cifra. Trabajamos la portada, la retícula editorial, el sistema de iconografía y la forma en que se presentan los datos de cada programa, manteniendo intacta la información que exige el estándar. Dos piezas editoriales que documentan y hacen públicos los avances de su trabajo, en un formato pensado para llegar tanto a aliados técnicos como a las comunidades de su territorio.",
+        result:{label:"2 informes", value:"2020 · 2021"},
+        media:{type:"image", src:"img/Caso-Muzo.jpg", bg:"dark"},
+        links:[]
       },
 	  {
         id:"rail", tag:"Desarrollo de Producto digital", title:"Rail — Red cultural de Bogotá",
@@ -936,14 +947,6 @@
         media:{type:"image", src:"img/caso-cocosalvaje.png", bg:"light"},
         links:[{label:"Website ↗", url:"https://cocosalvaje.com/"},{label:"Instagram ↗", url:"https://www.instagram.com/cocosalvaje_usa/"}]
       },
-      {
-        id:"opiac", tag:"Brand Identity + Participatory Design", title:"CPIAEN",
-        desc:"Visual identity for the OPIAC Council of Indigenous Peoples in Isolation and in a Natural State.",
-        longDesc:"We created the visual identity for CPIAEN, the Council of Indigenous Peoples in Isolation and in a Natural State of the OPIAC. The challenge was to build an identity that conveyed protection without representing the peoples in isolation from an outside perspective. The concept is rooted in the territory as a living, protective space: a circle of leaves encloses human silhouettes that represent the continuity of life and the diversity of the peoples. We developed the identity system—including its main versions, color palette, and applications for media and physical materials—with the goal of ensuring the brand could function as a tool for recognition and institutional communication without losing its connection to the territory.",
-        result:{label:"Identity System", value:"CPIAEN · 2026"},
-        media:{type:"image", src:"img/Caso-cpiaen.png", bg:"dark"},
-        links:[]
-      },
 	  {
         id:"muzo", tag:"Art Direction, Editorial Design, Infographics", title:"Muzo Foundation",
         desc:"Editorial design of the foundation’s 2020 sustainability reports and 2021–2025 social management plan.",
@@ -959,6 +962,14 @@
         result:{label:"8 territories", value:'"2016 · 2023"'},
         media:{type:"video", videoId:"haroBBqaxTc"},
         links:[{label:"Watch video ↗", url:"https://www.youtube.com/watch?v=haroBBqaxTc&t=3s"}]
+      },
+      {
+        id:"opiac", tag:"Brand Identity + Participatory Design", title:"CPIAEN",
+        desc:"Visual identity for the OPIAC Council of Indigenous Peoples in Isolation and in a Natural State.",
+        longDesc:"We created the visual identity for CPIAEN, the Council of Indigenous Peoples in Isolation and in a Natural State of the OPIAC. The challenge was to build an identity that conveyed protection without representing the peoples in isolation from an outside perspective. The concept is rooted in the territory as a living, protective space: a circle of leaves encloses human silhouettes that represent the continuity of life and the diversity of the peoples. We developed the identity system—including its main versions, color palette, and applications for media and physical materials—with the goal of ensuring the brand could function as a tool for recognition and institutional communication without losing its connection to the territory.",
+        result:{label:"Identity System", value:"CPIAEN · 2026"},
+        media:{type:"image", src:"img/Caso-cpiaen.png", bg:"dark"},
+        links:[]
       },
       {
         id:"rail", tag:"Digital Product development", title:"Rail — Bogotá's cultural network",
